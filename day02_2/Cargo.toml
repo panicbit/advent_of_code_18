@@ -5,3 +5,4 @@ authors = ["panicbit <panicbit.dev@gmail.com>"]
 
 [dependencies]
 aoc = "0.3.0"
+itertools = "0.7.11"
