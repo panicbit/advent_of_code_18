@@ -11,11 +11,12 @@ fn main(input: &str) -> i32 {
         .scan((HashSet::new(), 0), |(freqs, current_freq), freq| {
             *current_freq += freq;
 
-            let is_dupe = !freqs.insert(*current_freq);
-
-            Some((is_dupe, *current_freq))
+            match freqs.insert(*current_freq) {
+                false => Some(Some(*current_freq)),
+                true => Some(None),
+            }
         })
-        .find(|(is_dupe, _)| *is_dupe)
+        .flatten()
+        .next()
         .expect("No duplicate frequency found")
-        .1
 }
