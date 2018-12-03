@@ -312,6 +312,7 @@ name = "day03_2"
 version = "0.1.0"
 dependencies = [
  "aoc 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "regex 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
